@@ -13,8 +13,13 @@ export async function POST(req: NextRequest) {
   });
 
   console.log(user.id);
-  
+
   return NextResponse.json({
     message: "you are signed up",
   });
+}
+
+export async function GET() {
+  const user = await client.user.findFirst({});
+  return Response.json({ name: user?.username, username: user?.username });
 }
