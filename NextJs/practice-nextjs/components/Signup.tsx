@@ -1,7 +1,7 @@
 "use client";
-import axios from "axios";
 import { ChangeEventHandler, useState } from "react";
 import { useRouter } from "next/navigation";
+import { signup } from "@/app/actions/user";
 
 export function Signup() {
   const [username, setUsername] = useState("");
@@ -37,13 +37,8 @@ export function Signup() {
               />
               <button
                 onClick={async () => {
-                  const response = await axios.post(
-                    "http://localhost:3000/api/user",
-                    {
-                      username,
-                      password,
-                    }
-                  );
+                  const response = await signup(username, password);
+                  console.log(response);
                   router.push("/");
                 }}
                 type="button"

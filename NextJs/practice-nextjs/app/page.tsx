@@ -1,10 +1,13 @@
-import axios from "axios";
+import client from "@/db"
 
 async function getUserDetails() {
   try {
-    const response = await axios.get("http://localhost:3000/api/user");
-    return response.data;
-  } catch (e) {
+    const user = await client.user.findFirst({});
+	  return {
+      name: user?.username,
+      username: user?.username
+    }
+  }  catch(e) {
     console.log(e);
   }
 }
