@@ -1,0 +1,14 @@
+{
+  "name": "introreact",
+  "version": "1.0.0",
+  "description": "There are lerarning of React.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Musab Hassan",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
