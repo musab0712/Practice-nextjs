@@ -10,6 +10,8 @@
   </div>
 </div> */
 }
+import React from "react";
+import ReactDOM from "react-dom";
 
 const element = React.createElement("div", { className: "parent" }, [
   React.createElement("div", { className: "child-1" }, [
